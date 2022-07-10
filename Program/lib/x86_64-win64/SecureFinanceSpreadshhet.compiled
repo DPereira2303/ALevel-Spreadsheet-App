@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="C:\lazarus\fpc\3.2.0\bin\x86_64-win64\fpc.exe" Date="1357348719"/>
+  <Params Value=" -MObjFPC -Scghi -O1 -g -gl -WG -l -vewnhibq &quot;-FiC:\Users\David Pereira\Documents\P\Program\lib\x86_64-win64&quot; -FuC:\lazarus\lcl\units\x86_64-win64\win32 -FuC:\lazarus\lcl\units\x86_64-win64 -FuC:\lazarus\components\lazutils\lib\x86_64-win64 -FuC:\lazarus\packager\units\x86_64-win64 &quot;-FuC:\Users\David Pereira\Documents\P\Program\&quot; &quot;-FUC:\Users\David Pereira\Documents\P\Program\lib\x86_64-win64\&quot; &quot;-FEC:\Users\David Pereira\Documents\P\Program\&quot; &quot;-oC:\Users\David Pereira\Documents\P\Program\SecureFinanceSpreadshhet.exe&quot; -dLCL -dLCLwin32 SecureFinanceSpreadshhet.lpr"/>
+</CONFIG>

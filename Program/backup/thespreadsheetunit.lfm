@@ -1,0 +1,471 @@
+object Form2: TForm2
+  Left = 254
+  Height = 540
+  Top = 125
+  Width = 957
+  Caption = 'Form2'
+  ClientHeight = 540
+  ClientWidth = 957
+  Color = 12615680
+  LCLVersion = '2.0.10.0'
+  Visible = True
+  object MonthTotalLabel: TLabel
+    Left = 176
+    Height = 15
+    Top = 416
+    Width = 197
+    Caption = '^Enter month in text box (number)'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Height = -12
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    Visible = False
+  end
+  object CalcBut: TButton
+    Left = 264
+    Height = 25
+    Top = 384
+    Width = 75
+    Caption = 'Calculate'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = CalcButClick
+    ParentFont = False
+    TabOrder = 0
+    Visible = False
+  end
+  object WhichMonth: TEdit
+    Left = 176
+    Height = 23
+    Top = 384
+    Width = 80
+    ParentFont = False
+    TabOrder = 1
+    Visible = False
+  end
+  object Label1: TLabel
+    Left = 176
+    Height = 17
+    Top = 360
+    Width = 202
+    Caption = 'Calculate Month Total of Month:'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    Visible = False
+  end
+  object CalcYr: TButton
+    Left = 424
+    Height = 25
+    Top = 382
+    Width = 138
+    Caption = 'Calculate Year Average'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -12
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = CalcYrClick
+    ParentFont = False
+    TabOrder = 2
+    Visible = False
+  end
+  object YearTotalLabel: TLabel
+    Left = 232
+    Height = 20
+    Top = 280
+    Width = 37
+    Caption = 'Table'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    Visible = False
+  end
+  object DogU: TButton
+    Left = 45
+    Height = 44
+    Top = 32
+    Width = 102
+    Caption = 'Dog Unit'
+    Color = clInactiveBorder
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = DogUClick
+    ParentFont = False
+    TabOrder = 3
+  end
+  object FireU: TButton
+    Left = 45
+    Height = 44
+    Top = 115
+    Width = 102
+    Caption = 'Firearms Unit'
+    Color = clHighlightText
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = FireUClick
+    ParentFont = False
+    TabOrder = 4
+  end
+  object OfficersU: TButton
+    Left = 45
+    Height = 44
+    Top = 198
+    Width = 102
+    Caption = 'Officers'
+    Color = clWindow
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = OfficersUClick
+    ParentFont = False
+    TabOrder = 5
+  end
+  object CivilianU: TButton
+    Left = 45
+    Height = 44
+    Top = 275
+    Width = 102
+    Caption = 'Civilian'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = CivilianUClick
+    ParentFont = False
+    TabOrder = 6
+  end
+  object FindB: TEdit
+    Left = 640
+    Height = 23
+    Top = 400
+    Width = 88
+    ParentFont = False
+    TabOrder = 7
+    Text = 'Enter Data'
+  end
+  object FindEnt: TButton
+    Left = 704
+    Height = 22
+    Top = 440
+    Width = 80
+    Caption = 'Enter'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = FindEntClick
+    ParentFont = False
+    TabOrder = 8
+  end
+  object DBGrid1: TDBGrid
+    Left = 232
+    Height = 226
+    Top = 48
+    Width = 544
+    Color = clWindow
+    Columns = <>
+    DataSource = DataSource1
+    TabOrder = 9
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 264
+    Height = 25
+    Top = 13
+    Width = 241
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 25
+    ClientWidth = 241
+    DataSource = DataSource1
+    Options = []
+    TabOrder = 10
+    Visible = False
+  end
+  object Exithere: TButton
+    Left = 8
+    Height = 25
+    Top = 472
+    Width = 70
+    Caption = 'Exit'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = ExithereClick
+    ParentFont = False
+    TabOrder = 11
+  end
+  object BackBut: TButton
+    Left = 45
+    Height = 25
+    Top = 350
+    Width = 75
+    Caption = 'Back'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = BackButClick
+    ParentFont = False
+    TabOrder = 12
+  end
+  object Tablecomp1: TEdit
+    Left = 752
+    Height = 23
+    Top = 400
+    Width = 88
+    TabOrder = 13
+    Text = 'Table1'
+  end
+  object Tablecomp2: TEdit
+    Left = 865
+    Height = 23
+    Top = 400
+    Width = 88
+    TabOrder = 14
+    Text = 'Table2'
+  end
+  object Label2: TLabel
+    Left = 640
+    Height = 34
+    Top = 360
+    Width = 283
+    Caption = 'Enter what data or * for all data, then the two'#13#10'tables you would like to compare'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object YearTotalCalc: TButton
+    Left = 176
+    Height = 25
+    Top = 456
+    Width = 120
+    Caption = 'Calculate Year Total'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -12
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = YearTotalCalcClick
+    ParentFont = False
+    TabOrder = 15
+    Visible = False
+  end
+  object EditDataBut: TButton
+    Left = 432
+    Height = 49
+    Top = 456
+    Width = 83
+    Caption = 'Edit Data'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = EditDataButClick
+    ParentFont = False
+    TabOrder = 16
+    Visible = False
+  end
+  object Label3: TLabel
+    Left = 688
+    Height = 34
+    Top = 360
+    Width = 217
+    Caption = 'Enter the month, column and data '#13#10'you would like to change'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    Visible = False
+  end
+  object UpDatBut: TButton
+    Left = 816
+    Height = 25
+    Top = 437
+    Width = 75
+    Caption = 'Enter'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = UpDatButClick
+    ParentFont = False
+    TabOrder = 17
+    Visible = False
+  end
+  object Label5: TLabel
+    Left = 320
+    Height = 20
+    Top = 280
+    Width = 46
+    Caption = 'Label5'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Height = -15
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    Visible = False
+  end
+  object LOCKBUT: TButton
+    Left = 824
+    Height = 49
+    Top = 56
+    Width = 96
+    Caption = 'LOCK'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -21
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = LOCKBUTClick
+    ParentFont = False
+    TabOrder = 18
+  end
+  object MySQL56Connection1: TMySQL56Connection
+    Connected = True
+    LoginPrompt = False
+    DatabaseName = 'policeunits'
+    KeepConnection = False
+    Password = 'Pereira03'
+    Transaction = SQLTransaction1
+    UserName = 'root'
+    HostName = '127.0.0.1'
+    SkipLibraryVersionCheck = True
+    Left = 512
+    Top = 296
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = True
+    Database = MySQL56Connection1
+    Left = 608
+    Top = 296
+  end
+  object SQLQuery1: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    MaxIndexesCount = 4
+    FieldDefs = <    
+      item
+        Name = 'Month'
+        DataType = ftInteger
+        Precision = -1
+      end    
+      item
+        Name = 'Pay'
+        DataType = ftBCD
+        Precision = -1
+        Size = 2
+      end    
+      item
+        Name = 'Expenses'
+        DataType = ftBCD
+        Precision = -1
+        Size = 2
+      end    
+      item
+        Name = 'Overtime'
+        DataType = ftBCD
+        Precision = -1
+        Size = 2
+      end    
+      item
+        Name = 'Budget'
+        DataType = ftBCD
+        Precision = -1
+        Size = 2
+      end>
+    Database = MySQL56Connection1
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      ''
+    )
+    Params = <>
+    Left = 768
+    Top = 296
+  end
+  object DataSource1: TDataSource
+    DataSet = SQLQuery1
+    Left = 688
+    Top = 296
+  end
+end

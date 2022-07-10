@@ -1,0 +1,106 @@
+object Form3: TForm3
+  Left = 606
+  Height = 264
+  Top = 248
+  Width = 365
+  Caption = 'Form3'
+  ClientHeight = 264
+  ClientWidth = 365
+  Color = 12615680
+  LCLVersion = '2.0.10.0'
+  Visible = True
+  object Label3: TLabel
+    Left = 0
+    Height = 413
+    Top = -8
+    Width = 500
+    Caption = '.....'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -333
+    Font.Name = 'Showcard Gothic'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+    OnMouseEnter = Label3MouseEnter
+  end
+  object tmrlab: TLabel
+    Left = 152
+    Height = 30
+    Top = 56
+    Width = 36
+    Caption = '180'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Height = -21
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object KeyEnt: TEdit
+    Left = 120
+    Height = 23
+    Top = 112
+    Width = 101
+    EchoMode = emPassword
+    PasswordChar = '*'
+    TabOrder = 0
+  end
+  object ENT: TButton
+    Left = 131
+    Height = 26
+    Top = 160
+    Width = 75
+    Caption = 'Enter'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clBlack
+    Font.Height = -16
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    OnClick = ENTClick
+    ParentFont = False
+    TabOrder = 1
+  end
+  object Label2: TLabel
+    Left = 112
+    Height = 15
+    Top = 32
+    Width = 120
+    Caption = '(Seconds until closing)'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Height = -12
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label1: TLabel
+    Left = 131
+    Height = 15
+    Top = 96
+    Width = 79
+    Caption = 'Enter passcode'
+    Font.CharSet = ANSI_CHARSET
+    Font.Color = clWhite
+    Font.Height = -12
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Timer1: TTimer
+    Enabled = False
+    OnTimer = Timer1Timer
+    Left = 288
+    Top = 32
+  end
+end
