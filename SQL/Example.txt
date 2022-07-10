@@ -1,0 +1,27 @@
+CREATE DATABASE policeunits;
+
+USE policeunits;
+
+CREATE TABLE Dog (Pay DECIMAL(5,2), Expenses DECIMAL(5,2), Overtime DECIMAL(5,2), Budget DECIMAL(5,2));
+
+CREATE TABLE Officer (Pay DECIMAL(5,2), Expenses DECIMAL(5,2), Overtime DECIMAL(5,2), Budget DECIMAL(5,2));
+
+CREATE TABLE Firearms (Pay DECIMAL(5,2), Expenses DECIMAL(5,2), Overtime DECIMAL(5,2), Budget DECIMAL(5,2));
+
+CREATE TABLE Civilian (Pay DECIMAL(5,2), Expenses DECIMAL(5,2), Overtime DECIMAL(5,2), Budget DECIMAL(5,2));
+
+USE policeunits;
+SHOW TABLES;
+DESCRIBE civilian;
+
+INSERT INTO dog
+VALUES (x,2,3,4,5);
+
+SELECT * FROM dog;
+
+SELECT budget-(pay+expenses+overtime) FROM dog where month = 1;
+
+SELECT (SUM(Budget-(Pay+Expenses+Overtime)))/12 FROM dog;
+
+SELECT dog.*, officer.* FROM dog JOIN officer 
+ON dog.month = officer.month;
